@@ -1,10 +1,11 @@
 /*
 
-Eng. da ComputaÁ„o - CMN05S1 - POTA
+Eng. da Computa√ß√£o - CMN05S1 - POTA
 
 Mateus Henrique Carvalho de Sousa - 03096306
 Samuel Feitosa da Costa Rodrigues - 03116714
 Ayrton Gabriel Alves da Costa - 03118434
+Tiago Pessoa do Nascimeto - 03117355
 */
 
 #include <stdio.h>
@@ -27,26 +28,26 @@ void Register_Serv(){
 	int j;
 	setlocale(LC_ALL, "Portuguese");
 	system("cls");
-	printf(" CADASTRO DE PESSOAS NO Tribunal Rengional do Trabalho 11∞ Regi„oÆ\n ================================================\n");
+	printf(" CADASTRO DE PESSOAS NO Tribunal Rengional do Trabalho 11¬∞ Regi√£o¬Æ\n ================================================\n");
 	if (numServ<length){	
 		for (int i=numServ;i<length;i++){
 				printf("\n Digite o nome do servidor: ");
 				scanf("%s",serv[i].nome);
 							
-				printf("\n Digite a matrÌcula (apenas n˙meros): ");
+				printf("\n Digite a matr√≠cula (apenas n√∫meros): ");
 					scanf("%d",&serv[i].matricula);
 					for (j=0;(j<numServ)&&(j<length);j++){
-						while (serv[i].matricula == serv[j].matricula){ 	//isso impede que a mesma matrÌcula seja cadastrada para diferentes servidores
+						while (serv[i].matricula == serv[j].matricula){ 	//isso impede que a mesma matr√≠cula seja cadastrada para diferentes servidores
 							system("cls");
-							printf("\n A matrÌcula digitada j· foi cadastrada!\n");
-							printf("\n Atribua um n˙mero v·lido para a matrÌcula: ");
+							printf("\n A matr√≠cula digitada j√° foi cadastrada!\n");
+							printf("\n Atribua um n√∫mero v√°lido para a matr√≠cula: ");
 							scanf("%d",&serv[i].matricula);
 							}
 						}
-				printf("\n Digite a idade (apenas n˙meros): ");
+				printf("\n Digite a idade (apenas n√∫meros): ");
 				scanf("%d",&serv[i].idade);
 				
-				printf("\n Digite o CPF (o campo aceita pontos e hÌfen): ");
+				printf("\n Digite o CPF (o campo aceita pontos e h√≠fen): ");
 				scanf("%s",serv[i].cpf);	
 				
 				printf("\n Digite o Setor: ");
@@ -54,40 +55,40 @@ void Register_Serv(){
 				
 				numServ++;
 				system("cls");
-				printf("\n Cadastro concluÌdo!\n\n");
+				printf("\n Cadastro conclu√≠do!\n\n");
 				system("pause");
 				break;}
 					}
 	else{
-		printf("\n N„o È possÌvel cadastrar mais servidores!\n\n");
+		printf("\n N√£o √© poss√≠vel cadastrar mais servidores!\n\n");
 		system("pause");}
 };
 
 void List_Serv(){		
 	setlocale(LC_ALL, "Portuguese");
 	system("cls");
-	printf(" Listagem de Servidores - TRT11∞ REGI√OÆ\n====================================\n");
+	printf(" Listagem de Servidores - TRT11¬∞ REGI√ÉO¬Æ\n====================================\n");
 		if (numServ>0){
 			for (int i=0;(i<numServ)&&(i<length);i++){
-				printf("\n PosiÁ„o: %d",i);
+				printf("\n Posi√ß√£o: %d",i);
 				printf("\n Nome: %s",serv[i].nome);
-				printf("\n MatrÌcula: %d",serv[i].matricula);
+				printf("\n Matr√≠cula: %d",serv[i].matricula);
 				printf("\n Idade: %d",serv[i].idade);
 				printf("\n CPF: %s",serv[i].cpf);
 				printf("\n Setor: %s\n\n",serv[i].setor);
 			}
 			system("pause");}	
 		else{
-			printf("\n Ainda n„o h· servidores cadastrados!\n\n");
+			printf("\n Ainda n√£o h√° servidores cadastrados!\n\n");
 			system("pause");
 	}
 };
 
-void Sequential_Search(){		//funÁ„o que realiza uma busca linear SEM o uso de recurso
+void Sequential_Search(){		//fun√ß√£o que realiza uma busca linear SEM o uso de recurso
 	
 };
 
-void Sequential_Search_With_Resource(){		//funÁ„o que realiza uma busca linear COM o uso de recurso para campo tipo string
+void Sequential_Search_With_Resource(){		//fun√ß√£o que realiza uma busca linear COM o uso de recurso para campo tipo string
 	setlocale(LC_ALL, "Portuguese");	
 	system("cls");
 	
@@ -95,12 +96,12 @@ void Sequential_Search_With_Resource(){		//funÁ„o que realiza uma busca linear C
 	int encontrado = 0; //falso
 	char chave[128];
 	
-	printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ======================================\n");
+	printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ======================================\n");
 	printf("\n Digite o CPF a ser buscado: ");
     scanf("%s", chave);
     
 	while (i < length && !encontrado){
-		if(strcmp(chave, serv[i].cpf)==0){		//funÁ„o strcmp  da biblioteca string.h de C/C++ que compara strings
+		if(strcmp(chave, serv[i].cpf)==0){		//fun√ß√£o strcmp  da biblioteca string.h de C/C++ que compara strings
 		encontrado = 1; //Verdadeiro
 		}else {
 			i++;
@@ -109,19 +110,19 @@ void Sequential_Search_With_Resource(){		//funÁ„o que realiza uma busca linear C
 	
     if(encontrado){
     	system("cls");
-    	printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ======================================\n");
-    	printf("\n O CPF de N∫ %s foi encontrado!\n\n", serv[i].cpf);
-    	printf("\n PosiÁ„o: %d",i);
+    	printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ======================================\n");
+    	printf("\n O CPF de N¬∫ %s foi encontrado!\n\n", serv[i].cpf);
+    	printf("\n Posi√ß√£o: %d",i);
 		printf("\n Servidor: %s",serv[i].nome);
-		printf("\n MatrÌcula: %d\n\n",serv[i].matricula);	
+		printf("\n Matr√≠cula: %d\n\n",serv[i].matricula);	
     }else{
 		system("cls");
-		printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ======================================\n");
-		printf("\n O CPF de N∫ %s n„o foi encontrado!\n\n", chave);
+		printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ======================================\n");
+		printf("\n O CPF de N¬∫ %s n√£o foi encontrado!\n\n", chave);
 	}
 };
 
-int Binary_Search(){		//funÁ„o que realiza uma busca bin·ria SEM o uso de recurso para um campo do tipo numÈrico
+int Binary_Search(){		//fun√ß√£o que realiza uma busca bin√°ria SEM o uso de recurso para um campo do tipo num√©rico
 	setlocale(LC_ALL, "Portuguese");	
 	system("cls");
 
@@ -142,8 +143,8 @@ int Binary_Search(){		//funÁ„o que realiza uma busca bin·ria SEM o uso de recurs
 	    }	
 	}
 	
-	printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ======================================\n");
-	printf("\n Digite a matrÌcula a ser buscada: ");
+	printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ======================================\n");
+	printf("\n Digite a matr√≠cula a ser buscada: ");
     scanf("%d", &chave);
 	
 	while (inicial <= final && !encontrado){
@@ -158,15 +159,15 @@ int Binary_Search(){		//funÁ„o que realiza uma busca bin·ria SEM o uso de recurs
    	
 	if(encontrado){
     	system("cls");
-    	printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ======================================\n");
-    	printf("\n A matrÌcula de N∫ %d foi encontrada!\n\n", serv[meio].matricula);
-    	printf("\n PosiÁ„o: %d",meio);
+    	printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ======================================\n");
+    	printf("\n A matr√≠cula de N¬∫ %d foi encontrada!\n\n", serv[meio].matricula);
+    	printf("\n Posi√ß√£o: %d",meio);
 		printf("\n Servidor: %s",serv[meio].nome);
 		printf("\n CPF: %s\n\n",serv[meio].cpf);	
     }else{
 		system("cls");
-		printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ======================================\n");
-		printf("\n A matrÌcula de N∫ %d n„o foi encontrada!\n\n", chave);
+		printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ======================================\n");
+		printf("\n A matr√≠cula de N¬∫ %d n√£o foi encontrada!\n\n", chave);
 	}
 };		
 
@@ -181,19 +182,19 @@ void Search_Menu(){
 	
 	do{
 		system("cls");
-		printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ==================================\n");
+		printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ==================================\n");
 		
 		if (numServ>0){
 			system("cls");
-			printf(" BUSCA DE SERVIDORES - TRT11∞ REGI√OÆ\n ==================================\n");
-			printf("\n SELECIONE O M…TODO DE PESQUISA\n\n");
+			printf(" BUSCA DE SERVIDORES - TRT11¬∞ REGI√ÉO¬Æ\n ==================================\n");
+			printf("\n SELECIONE O M√âTODO DE PESQUISA\n\n");
 			printf("  1 - PESQUISA SEQUENCIAL SEM USO DE RECURSO\n");
 			printf("  2 - PESQUISA SEQUENCIAL COM USO DE RECURSO\n");
-			printf("  3 - PESQUISA BIN¡RIA SEM USO DE RECURSO\n");
-			printf("  4 - PESQUISA BIN¡RIA COM USO DE RECURSO\n");
+			printf("  3 - PESQUISA BIN√ÅRIA SEM USO DE RECURSO\n");
+			printf("  4 - PESQUISA BIN√ÅRIA COM USO DE RECURSO\n");
 			printf("  0 - CANCELAR\n\n");
 				
-			printf(" Digite a opÁ„o desejada: ");
+			printf(" Digite a op√ß√£o desejada: ");
 			scanf("%d", &op_menu);
 		
 			switch(op_menu){
@@ -209,32 +210,32 @@ void Search_Menu(){
 				
 				default:
 		            system("cls");
-					printf("\n OpÁ„o inv·lida, tente novamente!\n\n");
+					printf("\n Op√ß√£o inv√°lida, tente novamente!\n\n");
 					system("pause");
 					break;
 				}
 			}
 		else
-			printf("\n N„o È possÌvel buscar funcion·rios porque ainda n„o h· cadastros!\n\n");
+			printf("\n N√£o √© poss√≠vel buscar funcion√°rios porque ainda n√£o h√° cadastros!\n\n");
 			system("pause");
 	}while(op_menu!=0);
 };
 
 main(){	
 	setlocale(LC_ALL, "Portuguese");
-	system("TITLE Athabasca SystemsÆ");
+	system("TITLE Athabasca Systems¬Æ");
 	int op;
 	
 	do{
 		system("cls");
-		printf(" BEM-VINDO(A) AO SISTEMA DE CADASTRO DO TRIBUBUNAL REGIONAL DO TRABALHO - TRT11∞ REGI√OÆ\n =================================================================\n");
-		printf("\n ESCOLHA UMA DAS OP«’ES ABAIXO\n\n");
+		printf(" BEM-VINDO(A) AO SISTEMA DE CADASTRO DO TRIBUBUNAL REGIONAL DO TRABALHO - TRT11¬∞ REGI√ÉO¬Æ\n =================================================================\n");
+		printf("\n ESCOLHA UMA DAS OP√á√ïES ABAIXO\n\n");
 		printf("  1 - CADASTRAR\n");
 		printf("  2 - LISTAR\n");
 		printf("  3 - BUSCAR\n");
 		printf("  0 - SAIR\n\n");
 		
-		printf(" Digite a opÁ„o desejada: ");
+		printf(" Digite a op√ß√£o desejada: ");
 		scanf("%d", &op);
 		
 		switch(op){
@@ -249,7 +250,7 @@ main(){
 			
 			default:
 	            system("cls");
-				printf("\n OpÁ„o inv·lida, tente novamente!\n\n");
+				printf("\n Op√ß√£o inv√°lida, tente novamente!\n\n");
 				system("pause");
 				break;
 		}
